@@ -63,6 +63,8 @@ RemoveMDWGC.addEventListener("click", () => {
     if ((item.innerHTML.length = 1)) {
       if (item.style.backgroundColor == mainColor) {
         item.remove();
+      } else {
+        alert("Color not found");
       }
     }
   });
@@ -79,6 +81,8 @@ RemoveChildWGC.addEventListener("click", () => {
     if (item.innerHTML.length < 1) {
       if (item.style.backgroundColor == mainColor) {
         item.remove();
+      }else {
+        alert("Color not found");
       }
     }
   });
