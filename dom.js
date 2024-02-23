@@ -41,7 +41,6 @@ function addBlock() {
         sisDiv.addEventListener("click", () => {
           let num = Math.floor(Math.random() * 7);
           parentDiv.style.backgroundColor = colors[num];
-          sisDiv.style.backgroundColor = colors[(num += 1)];
           // checking for the red sister div start here
         });
       });
