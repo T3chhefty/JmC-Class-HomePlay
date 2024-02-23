@@ -20,6 +20,7 @@ function addBlock() {
   // scrapping the section Element
   let items = section.querySelectorAll("*");
   items.forEach((item) => {
+
     // checking and selecting the button element in the section start here
     if (item.tagName == "BUTTON") {
       // adding a click event listener to the button element
@@ -33,18 +34,22 @@ function addBlock() {
 
         // for parent div green background
         parentDiv.addEventListener("click", () => {
-          console.log("Parent clicked");
-          // checking for the red sister div start here
+          // parentDiv.get("*").style.backgroundColor = colors[num];
+          let children = parentDiv.querySelectorAll("*");
+         
         });
 
-        // checking for the red div end here
+        // checking for the red div start here
         sisDiv.addEventListener("click", () => {
           let num = Math.floor(Math.random() * 7);
           parentDiv.style.backgroundColor = colors[num];
-          // checking for the red sister div start here
+          // checking for the red sister div end here
         });
       });
     }
+
+
+
   });
   //ends here
 }
@@ -63,7 +68,7 @@ RemoveMDWGC.addEventListener("click", () => {
       if (item.style.backgroundColor == mainColor) {
         item.remove();
       } else {
-        alert("Color not found");
+        alert(`${mainColor}, not found`);
       }
     }
   });
@@ -81,7 +86,7 @@ RemoveChildWGC.addEventListener("click", () => {
       if (item.style.backgroundColor == mainColor) {
         item.remove();
       }else {
-        alert("Color not found");
+        alert(`${mainColor}, not found`);
       }
     }
   });
